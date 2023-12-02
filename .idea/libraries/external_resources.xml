@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="external-resources">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/core-core-12.64.2/src/test/external-resources/spring-core-4.3.4.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/core-core-12.64.2/src/test/external-resources/libs-for-test.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
