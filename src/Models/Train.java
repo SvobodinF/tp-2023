@@ -7,4 +7,15 @@ public class Train {
         this.number = number;
         this.speed = speed;
     }
+
+    @Override
+    public String toString() {
+        return "Поезд: \n" +
+                "Номер поезда: " + number +
+                "\nСкорость: " + speed + "км/ч\n";
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
 }

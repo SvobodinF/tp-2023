@@ -2,10 +2,11 @@ package Services;
 
 import Models.Route;
 import Repository.Repositoreble;
+import ServiceLocator.Service;
 
 import java.util.List;
 
-public class RouteService {
+public class RouteService implements Service {
     private final Repositoreble<Route> repositoreble;
 
     public RouteService(Repositoreble<Route> repositoreble) {
@@ -26,5 +27,10 @@ public class RouteService {
 
     public void remove(Route route) {
         repositoreble.remove(route);
+    }
+
+    @Override
+    public String getName() {
+        return getClass().getName();
     }
 }

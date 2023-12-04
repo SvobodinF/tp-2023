@@ -40,4 +40,9 @@ public class InMemoryRepository<T extends Datable> implements Repositoreble<T> {
     public void edit(T obj) {
 
     }
+
+    @Override
+    public String getName() {
+        return this.getClass().getName();
+    }
 }
