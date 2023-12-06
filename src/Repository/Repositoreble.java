@@ -9,6 +9,7 @@ public interface Repositoreble<T> extends Service {
 
     List<T> getAll();
 
+
     void add(T obj);
 
     void remove(T obj);

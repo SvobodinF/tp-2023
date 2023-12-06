@@ -1,6 +1,8 @@
 import Models.Route;
 import Models.Station;
 import Models.Train;
+import Repository.Samples.Database.ConnectionManager;
+import Repository.Samples.Database.DatabaseRepository;
 import Services.RouteService;
 import ServiceLocator.*;
 import Utils.Coordinates;
@@ -13,7 +15,7 @@ import java.util.LinkedList;
 public class Main {
     public static void main(String[] args) {
         RouteService routeService = ServiceLocator.getService(RouteService.class);
-        View view = ServiceLocator.getService(ConsoleView.class);
+        /*View view = ServiceLocator.getService(ConsoleView.class);
 
         //Добавить новый маршрут
         routeService.add(new Route("Маршрут 1", new Train(10, 50), 1L));
@@ -40,5 +42,6 @@ public class Main {
 
         view.getArriveTime(2L);
         view.getDepartureTime(2L);
+        //view.getAllTest();*/
     }
 }
