@@ -2,7 +2,9 @@ package Models;
 import Utils.Coordinates;
 import Utils.Time;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.List;
 
 public class Route implements Datable {
@@ -10,6 +12,9 @@ public class Route implements Datable {
     private String name;
     private Train train;
     private long id;
+
+    public Route(){
+    }
     public Route(String name, Train train, long id) {
         stations = new ArrayList<>();
 
@@ -60,6 +65,18 @@ public class Route implements Datable {
     @Override
     public long getId() {
         return id;
+    }
+
+    @Override
+    public void construct(Dictionary<String, Object> dictionary) {
+        id = (long)dictionary.get("id");
+        name = (String)dictionary.get("name");
+        train = (Train) dictionary.get("train");
+    }
+
+    @Override
+    public String getData() {
+        return null;
     }
 
     @Override
